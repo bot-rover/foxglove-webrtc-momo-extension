@@ -41,9 +41,9 @@ Open Foxglove Studio and add  `WebRTC Camera`  panel from the list
 ## Configuration
 
 - Port - websocket port for WebRTC connection initialization
-- Retry (ms) - period after which connection will be reinitialized in case of disconnection
+- Retry (ms) - period after which connection will be reinitialized in case of broken connection
 - Bandwidth (mbps) - max allowed bandwidth to use by WebRTC (0 - no limit)
-- Codec - preferred codec used by momo
+- Codec - preferred codec used by MOMO
 
 ## Streaming ROS image
 
