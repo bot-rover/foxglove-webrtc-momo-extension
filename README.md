@@ -7,7 +7,7 @@
 
   
 
-Extension allows to stream camera video feed from the robot to Foxglove Studio via WebRTC. Panel could be used for multiple cameras and shows basic connection information: `framerate`, `resolution`, `round trip time` and `current bandwidth`
+Extension allows to stream camera video feed from the robot to Foxglove Studio via WebRTC. Panel could be used for multiple cameras and shows basic connection information: `framerate`, `current bandwidth`, `round trip time` and `resolution`
 
 It uses [MOMO](https://github.com/shiguredo/momo) WebRTC client for streaming adjusting framerate, resolution and quality based on current network conditions and available bandwidth. Also panel has auto reconnection functionality for unstable cellular networks
 
