@@ -3,7 +3,7 @@
 
   
 
-![screenshot](https://github.com/bot-rover/foxglove-gamepad-teleop-extension/blob/master/images/screenshot.png?raw=true)
+![screenshot](https://github.com/bot-rover/foxglove-webrtc-momo-extension/blob/master/images/screenshot.png?raw=true)
 
   
 
