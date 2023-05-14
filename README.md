@@ -17,15 +17,6 @@ MOMO is a WebRTC native client that uses `libwebrtc` and works in various enviro
 
 It streams directly from video device and not from ROS `sensor_msgs/Image` topic. If you want to stream from ROS topic check **Streaming ROS image** section
 
-## Required changes in source code
-
-This panel uses robots IP address for connecting to MOMO websocket, but connection information is not populated in Foxglove `PanelExtensionAdapter`. So there is two ways of making WebRTC connection: 
-
-- Update MOMO source code to use ROS topics to initiate connection. Hard way because MOMO is written in C++
-- Update Foxglove `PanelExtensionAdapter` to provide us IP of the connection
-
-We are using second way and it requires several changes in Foxglove Studio source code. Changes are described [here](https://github.com/foxglove/studio/pull/5672)
-
 ## Connection
 
 [Download](https://github.com/shiguredo/momo/releases) MOMO binary or [build](https://github.com/shiguredo/momo/blob/develop/doc/BUILD_LINUX_LOCAL.md) it by yourself ;)
@@ -39,7 +30,9 @@ To start MOMO on the robot run:
 Open Foxglove Studio and add  `WebRTC Camera`  panel from the list
  
 ## Configuration
-
+- IP Source - Defines how panel will get ip of MOMO WebRTC. `Manual` for entrering IP of MOMO WebRTC manualy (if you have only one robot with known ip). `ROS Parameter` uses IP from defined ROS param (if you have multiple robots and don't want to enter ip manualy each time you connect to robot).
+- IP - IP of MOMO WebRTC. Works with `IP Source = Manual`
+- ROS Parameter - gets MOMO WebRTC ip from ROS parametr. Works with `IP Source = ROS Parameter`
 - Port - websocket port for WebRTC connection initialization
 - Retry (ms) - period after which connection will be reinitialized in case of broken connection
 - Bandwidth (mbps) - max allowed bandwidth to use by WebRTC (0 - no limit)
